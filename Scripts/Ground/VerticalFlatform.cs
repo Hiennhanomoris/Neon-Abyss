@@ -16,6 +16,8 @@ public class VerticalFlatform : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.S))
             waitTime = 0.5f;
+
+        //rotate this when press S for 0.5s
         if(Input.GetKey(KeyCode.S))
         {
             if(waitTime <= 0)
@@ -25,6 +27,8 @@ public class VerticalFlatform : MonoBehaviour
             }
             else waitTime -= Time.deltaTime;
         }   
+        
+        //reset rotation when player want to jump
         if(Input.GetKey(KeyCode.Space))
             effector.rotationalOffset = 0f; 
     }
