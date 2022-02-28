@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private bool facingRinght;
-    private bool isOnGround;
+    public bool isOnGround;
+    public bool isOnJumpingGround;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsJumpingGround;
     [SerializeField] private float checkRadius;
 
     Rigidbody2D player_rb;
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleMovement();
         CheckOnGround();
+        CheckOnJumpingGround();
     }
 
     private void Update()
@@ -57,6 +60,11 @@ public class PlayerMovement : MonoBehaviour
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
     }
 
+    private void CheckOnJumpingGround()
+    {
+        isOnJumpingGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsJumpingGround);
+    }
+
     private void HandleMovement()
     {
         //move player 
@@ -76,5 +84,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scaler = this.transform.localScale;
         scaler.x *= -1;
         this.transform.localScale = scaler;
+    }
+
+    public bool GetIsOnJumpingGround()
+    {
+        return isOnJumpingGround;
     }
 }

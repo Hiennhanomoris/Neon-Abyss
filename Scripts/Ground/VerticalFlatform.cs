@@ -5,7 +5,6 @@ using UnityEngine;
 public class VerticalFlatform : MonoBehaviour
 {
     private PlatformEffector2D effector;
-    [SerializeField] private float waitTime;
 
     private void Start() 
     {
@@ -14,22 +13,11 @@ public class VerticalFlatform : MonoBehaviour
 
     private void Update() 
     {
-        if(Input.GetKeyUp(KeyCode.S))
-            waitTime = 0.5f;
-
         //rotate this when press S for 0.5s
         if(Input.GetKey(KeyCode.S))
-        {
-            if(waitTime <= 0)
-            {
-                effector.rotationalOffset = 180f;
-                waitTime = 0.5f;
-            }
-            else waitTime -= Time.deltaTime;
-        }   
-        
-        //reset rotation when player want to jump
-        if(Input.GetKey(KeyCode.Space))
+            effector.rotationalOffset = 180f; 
+        //reset rotation
+        else
             effector.rotationalOffset = 0f; 
     }
 }
