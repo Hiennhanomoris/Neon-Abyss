@@ -24,7 +24,6 @@ public class JumpingGround : MonoBehaviour
         {
             if(player.GetComponent<PlayerMovement>().GetIsOnJumpingGround())
                 {
-                    Debug.Log("here");
                     player.GetComponent<Rigidbody2D>().velocity = Vector2.up * force;
                 }
             effector.rotationalOffset = 0f; 
