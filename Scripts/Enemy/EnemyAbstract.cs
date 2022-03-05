@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyAbstracts : MonoBehaviour
+public abstract class EnemyAbstract : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
@@ -33,5 +33,10 @@ public abstract class EnemyAbstracts : MonoBehaviour
             other.GetComponent<PlayerStatus>().TakeDamage(damage);   
             TakeDamage(other.GetComponent<PlayerStatus>().getDamage());
         } 
+        else if(other.CompareTag("Player Bullet"))
+            {
+                TakeDamage(PlayerStatus.Instance.getDamage());
+                Destroy(other.gameObject);
+            }
     }
 }

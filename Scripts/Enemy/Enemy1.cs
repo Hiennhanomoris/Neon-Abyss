@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : EnemyAbstracts
+public class Enemy1 : EnemyAbstract
 {
     private bool isMovingRight;
     private RaycastHit2D groundInfor;
