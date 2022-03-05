@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
     public static PlayerStatus Instance;
 
     public PlayerSO playerStatus;
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite emptyHeart;
 
     private void Awake() 
     {
@@ -98,6 +102,16 @@ public class PlayerStatus : MonoBehaviour
         if(other.CompareTag("Enemy"))
             TakeDamage(other.gameObject.GetComponent<EnemyAbstract>().damage);  
         if(other.CompareTag("Enemy2 Bullet"))
-            TakeDamage(2);  
+            TakeDamage(1);  
+    }
+
+    private void Update() 
+    {
+        for(int i = 0; i < hearts.Length; i++)
+        {
+            if(i < getCurrentHealth())
+                hearts[i].sprite = fullHeart;
+            else hearts[i].sprite = emptyHeart;
+        }    
     }
 }

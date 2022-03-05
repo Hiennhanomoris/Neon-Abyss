@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   currentHealth: 0
-  damage: 2
+  damage: 1
   moveSpeed: 1.5
   moveDistance: 4
   enemy2Bullet: {fileID: 1904363190505260391, guid: ce8f2df8b92434144aab35f08127dc2c, type: 3}
