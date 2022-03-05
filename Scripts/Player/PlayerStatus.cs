@@ -73,6 +73,16 @@ public class PlayerStatus : MonoBehaviour
         playerStatus.extraJump = amount;
     }
 
+    public int getDamage()
+    {
+        return playerStatus.damage;
+    }
+
+    public void setDamage(int amount)
+    {
+        playerStatus.damage = amount;
+    }
+
     public void TakeDamage(int amount)
     {
         if(playerStatus.currentHealth <= amount)
