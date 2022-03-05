@@ -92,4 +92,12 @@ public class PlayerStatus : MonoBehaviour
             playerStatus.currentHealth -= amount;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.CompareTag("Enemy"))
+            TakeDamage(other.gameObject.GetComponent<EnemyAbstract>().damage);  
+        if(other.CompareTag("Enemy2 Bullet"))
+            TakeDamage(2);  
+    }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1904363190505260390}
   - component: {fileID: -5722344213356565575}
   - component: {fileID: 4060386807504833938}
+  - component: {fileID: 7857598042679877144}
   m_Layer: 0
   m_Name: Enemy2 Bullet
-  m_TagString: Untagged
+  m_TagString: Enemy2 Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +95,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -121,3 +122,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7857598042679877144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904363190505260391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19707c9d70b9f148a9120cf1a805a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

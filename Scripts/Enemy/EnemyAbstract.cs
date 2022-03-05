@@ -31,7 +31,7 @@ public abstract class EnemyAbstract : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.GetComponent<PlayerStatus>().TakeDamage(damage);   
-            TakeDamage(other.GetComponent<PlayerStatus>().getDamage());
+            //TakeDamage(other.GetComponent<PlayerStatus>().getDamage());
         } 
         else if(other.CompareTag("Player Bullet"))
             {
