@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsJumpingGround;
     [SerializeField] private float checkRadius;
 
+    [SerializeField] private Animator animator;
+
     Rigidbody2D player_rb;
 
     private void Start()
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJumping()
     {
+        animator.SetBool("isJumping", !isOnGround);         //control jumping_animation
         if (isOnGround == true)
         {
             //reset current jump when player stand on the ground
@@ -70,6 +73,9 @@ public class PlayerMovement : MonoBehaviour
         //move player 
         float horizontal = Input.GetAxis("Horizontal");
         player_rb.velocity = new Vector2(horizontal * PlayerStatus.Instance.getMoveSpeed(), player_rb.velocity.y);
+
+        
+        animator.SetFloat("speed", Mathf.Abs(horizontal));      //control animation
 
         if ((facingRinght == false && horizontal > 0) || (facingRinght == true && horizontal < 0))
         {
