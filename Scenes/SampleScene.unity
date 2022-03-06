@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 208558814}
   m_Layer: 3
   m_Name: 1 (2)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 369446667}
   m_Layer: 3
   m_Name: 1 (1)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 666860720}
   m_Layer: 0
   m_Name: Jumping Ground
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy1SpawnPoint: {fileID: 1676107}
+  hidenGround: {fileID: 1404741765}
   enemy1: {fileID: 6737545713546161531, guid: 4a0c91e7aaf137041bb3925e5a0c2e99, type: 3}
   enemy2: {fileID: 5955887738950925834, guid: dcf81b214db7cfa429b8fd7139878fb8, type: 3}
 --- !u!4 &697820902
@@ -730,7 +731,7 @@ GameObject:
   - component: {fileID: 748990517}
   m_Layer: 0
   m_Name: Simple Ground
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1065,7 +1066,7 @@ GameObject:
   - component: {fileID: 1205240752}
   m_Layer: 3
   m_Name: Ground2
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1206,7 @@ GameObject:
   - component: {fileID: 1220813267}
   m_Layer: 3
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1415,10 +1416,9 @@ GameObject:
   - component: {fileID: 1404741769}
   - component: {fileID: 1404741768}
   - component: {fileID: 1404741767}
-  - component: {fileID: 1404741770}
   m_Layer: 3
   m_Name: 1 (5)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,18 +1533,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1404741770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404741765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14e95cdac872979408b863a4807942fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1430019629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,7 +1544,7 @@ GameObject:
   - component: {fileID: 1430019630}
   m_Layer: 0
   m_Name: Vertical Platform
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1591,7 +1579,7 @@ GameObject:
   - component: {fileID: 1437333323}
   m_Layer: 6
   m_Name: 1 (4)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,7 +1751,7 @@ GameObject:
   - component: {fileID: 1534051559}
   m_Layer: 3
   m_Name: 1 (4)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2124,7 +2112,7 @@ GameObject:
   - component: {fileID: 1772987375}
   m_Layer: 3
   m_Name: 1 (3)
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2280,7 +2268,7 @@ GameObject:
   - component: {fileID: 1819092001}
   m_Layer: 0
   m_Name: Hiden Ground
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

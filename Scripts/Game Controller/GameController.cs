@@ -5,13 +5,17 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Transform enemy1SpawnPoint;
+    [SerializeField] private GameObject hidenGround;
     [SerializeField] private GameObject enemy1;
     [SerializeField] private GameObject enemy2;
+    private bool isHiden;
 
     private void Start() 
     {
         Instantiate(enemy1, enemy1SpawnPoint.position, Quaternion.identity);   
         StartCoroutine(SpawnEnemy2()); 
+        isHiden = false;
+        StartCoroutine(Hide());
     }
 
     private IEnumerator SpawnEnemy2()
@@ -27,6 +31,17 @@ public class GameController : MonoBehaviour
             }
 
             yield return new WaitForSeconds(15f);
+        }
+    }
+
+    private IEnumerator Hide()
+    {
+        while(true)
+        {
+            hidenGround.SetActive(!isHiden);
+            isHiden = !isHiden;
+
+            yield return new WaitForSeconds(2f);
         }
     }
 }
