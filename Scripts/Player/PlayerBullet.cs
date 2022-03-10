@@ -13,7 +13,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(!other.CompareTag("Player") && !other.CompareTag("Map"))
+        if(!other.CompareTag("Player") && !other.CompareTag("Map") && !other.CompareTag("Background"))
             Destroy(this.gameObject);    
     }
 }
