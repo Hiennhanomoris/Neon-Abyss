@@ -9,11 +9,13 @@ public class Enemy2 : EnemyAbstract
     [SerializeField] Transform spawnPoint;
     [SerializeField] float bulletSpeed;
     private bool ready2Fire;
+    private bool facingRinght;
 
     public override void Start()
     {
         base.Start();
         ready2Fire = false;
+        facingRinght = true;
         StartCoroutine(Fire());
         
     }
@@ -29,6 +31,12 @@ public class Enemy2 : EnemyAbstract
         {
             ready2Fire = true;
             Idle();
+        }
+
+        if((this.transform.position.x >= PlayerStatus.Instance.transform.position.x && facingRinght) || 
+        (this.transform.position.x < PlayerStatus.Instance.transform.position.x && facingRinght == false))
+        {
+            Flip();
         }
     }
 
@@ -56,5 +64,14 @@ public class Enemy2 : EnemyAbstract
             }
             yield return new WaitForSeconds(2f);
         }
+    }
+
+    private void Flip()
+    {
+        //change direction of this object
+        facingRinght = !facingRinght;
+        Vector3 scaler = this.transform.localScale;
+        scaler.x *= -1;
+        this.transform.localScale = scaler;
     }
 }
