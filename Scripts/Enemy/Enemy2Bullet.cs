@@ -13,7 +13,7 @@ public class Enemy2Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(!other.CompareTag("Enemy") && !other.CompareTag("Map"))
+        if(!other.CompareTag("Enemy") && !other.CompareTag("Map") && !other.CompareTag("Background"))
             Destroy(this.gameObject);    
     }
 }

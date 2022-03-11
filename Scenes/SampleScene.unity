@@ -216,6 +216,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   playerBullet: {fileID: 3422237147775604603, guid: 07c2dc57b4c009545ba80e46b3b60fef, type: 3}
   spawnPoint: {fileID: 1897231674}
+  gunStatus: {fileID: 0}
 --- !u!212 &88298305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -861,7 +862,6 @@ GameObject:
   - component: {fileID: 461766388}
   - component: {fileID: 461766391}
   - component: {fileID: 461766390}
-  - component: {fileID: 461766389}
   m_Layer: 0
   m_Name: Bounce Gun
   m_TagString: Untagged
@@ -884,19 +884,6 @@ Transform:
   m_Father: {fileID: 276923087}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461766389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461766387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27069e2f3f25cc45bcac704da32e443, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalGunStatus: {fileID: 11400000, guid: a53b81bb99338834b808d1bd14fd44ca, type: 2}
 --- !u!114 &461766390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,6 +900,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   playerBullet: {fileID: 3422237147775604603, guid: 07c2dc57b4c009545ba80e46b3b60fef, type: 3}
   spawnPoint: {fileID: 1466138728}
+  gunStatus: {fileID: 11400000, guid: a53b81bb99338834b808d1bd14fd44ca, type: 2}
 --- !u!212 &461766391
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2822,7 +2810,6 @@ GameObject:
   - component: {fileID: 1936827966}
   - component: {fileID: 1936827967}
   - component: {fileID: 1936827969}
-  - component: {fileID: 1936827968}
   m_Layer: 0
   m_Name: Normal Gun
   m_TagString: Untagged
@@ -2896,19 +2883,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1936827968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936827965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27069e2f3f25cc45bcac704da32e443, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalGunStatus: {fileID: 11400000, guid: b074b9853e50fb342962656080477dcb, type: 2}
 --- !u!114 &1936827969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2925,6 +2899,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   playerBullet: {fileID: 3422237147775604603, guid: 18f749054e4832d46bfec0161ee23b5b, type: 3}
   spawnPoint: {fileID: 1465604066}
+  gunStatus: {fileID: 11400000, guid: b074b9853e50fb342962656080477dcb, type: 2}
 --- !u!1 &2021713068
 GameObject:
   m_ObjectHideFlags: 0

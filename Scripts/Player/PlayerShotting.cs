@@ -8,6 +8,7 @@ public class PlayerShotting : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] GameObject playerBullet;
     [SerializeField] Transform spawnPoint;
+    [SerializeField] private GunSO gunStatus;
     private Rigidbody2D gunRb;
 
     private void Start() 
@@ -28,7 +29,7 @@ public class PlayerShotting : MonoBehaviour
                 GameObject bullet = Instantiate(playerBullet, spawnPoint.position, Quaternion.identity);
                 bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
 
-                yield return new WaitForSeconds(this.GetComponent<NormalGun>().normalGunStatus.fireRate);
+                yield return new WaitForSeconds(gunStatus.fireRate);
             }
             else yield return null;
         }
