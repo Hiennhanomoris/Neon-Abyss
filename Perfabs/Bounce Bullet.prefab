@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8522200918225052665}
   - component: {fileID: 1112733959757214395}
   - component: {fileID: 7381505649218657535}
-  - component: {fileID: -77832467576332104}
+  - component: {fileID: -9118786000525939188}
   m_Layer: 0
-  m_Name: Player Bullet
+  m_Name: Bounce Bullet
   m_TagString: Player Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 98584219510839402, guid: 6789cfcd48b03be4d979b16d435e1953, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8118168, g: 0.31954432, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1372f3f69f7264b9fb9ed267eb144b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-77832467576332104
+--- !u!114 &-9118786000525939188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -8,27 +8,29 @@ public class PlayerShotting : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] GameObject playerBullet;
     [SerializeField] Transform spawnPoint;
-    private Rigidbody2D playerRb;
+    private Rigidbody2D gunRb;
 
     private void Start() 
     {
-        playerRb = GetComponent<Rigidbody2D>();
+        gunRb = GetComponent<Rigidbody2D>();
+        StartCoroutine(Shotting());
     }
 
-    private void Update() 
+    private IEnumerator Shotting()
     {
-        Shotting();
-    }
-
-    private void Shotting()
-    {
-        if(Input.GetMouseButtonDown(0))
+        while(PlayerStatus.Instance.getCurrentHealth() > 0)
         {
-            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = mousePos - new Vector2(this.transform.position.x, this.transform.position.y);
+            if(Input.GetMouseButtonDown(0))
+            {
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 direction = mousePos - new Vector2(this.transform.position.x, this.transform.position.y);
 
-            GameObject bullet = Instantiate(playerBullet, spawnPoint.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
+                GameObject bullet = Instantiate(playerBullet, spawnPoint.position, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * bulletForce, ForceMode2D.Impulse);
+
+                yield return new WaitForSeconds(this.GetComponent<NormalGun>().normalGunStatus.fireRate);
+            }
+            else yield return null;
         }
     }
 }
