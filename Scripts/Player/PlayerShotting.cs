@@ -11,7 +11,7 @@ public class PlayerShotting : MonoBehaviour
     [SerializeField] private GunSO gunStatus;
     private Rigidbody2D gunRb;
 
-    private void Start() 
+    private void OnEnable() 
     {
         gunRb = GetComponent<Rigidbody2D>();
         StartCoroutine(Shotting());
